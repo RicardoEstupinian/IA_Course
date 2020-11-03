@@ -4,7 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-	<title>1.4 Módulo de Teoría de Conjuntos</title>
+	<title>8.3 Teoria de graficas</title>
 	<meta name="generator" content="Zim 0.68">
 	<meta name="viewport" content="width=device-width">
 	<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300&subset=latin,greek,latin-ext' rel='stylesheet' type='text/css'> -->
@@ -140,18 +140,15 @@
 		<div id="navigation"> <ul>
 <li><a href="../../Inteligencia_Artificial.html" title="Inteligencia Artificial" class="page">Inteligencia Artificial</a>
 <ul>
-<li><a href="../1._Curso_de_Pensamiento_Lógico.html" title="1. Curso de Pensamiento Lógico" class="page">1. Curso de Pensamiento Lógico</a>
+<li><a href="../1._Curso_de_Pensamiento_Lógico.html" title="1. Curso de Pensamiento Lógico" class="page">1. Curso de Pensamiento Lógico</a></li>
+<li><a href="../8._Matematicas_discretas.html" title="8. Matematicas discretas" class="page">8. Matematicas discretas</a>
 <ul>
-<li><a href="./1.1_Habilitades_Basicas_del_Pensamiento.html" title="1.1 Habilitades Basicas del Pensamiento" class="page">1.1 Habilitades Basicas del Pensamiento</a></li>
-<li><a href="./1.2_Inferencias_Lógicas.html" title="1.2 Inferencias Lógicas" class="page">1.2 Inferencias Lógicas</a></li>
-<li><a href="./1.3_Habilidades_Lógico-Matemáticas.html" title="1.3 Habilidades Lógico-Matemáticas" class="page">1.3 Habilidades Lógico-Matemáticas</a></li>
-<li><b>1.4 Módulo de Teoría de Conjuntos</b></li>
-<li><a href="./1.5_Aritmética_en_la_Lógica..html" title="1.5 Aritmética en la Lógica." class="page">1.5 Aritmética en la Lógica.</a></li>
-<li><a href="./1.6_Sucesiones_Numericas_y_Series.html" title="1.6 Sucesiones Numericas y Series" class="page">1.6 Sucesiones Numericas y Series</a></li>
-<li><a href="./1.7_Diagramas_de_Flujo.html" title="1.7 Diagramas de Flujo" class="page">1.7 Diagramas de Flujo</a></li>
+<li><a href="./8.1_Introduccion_a_la_logica.html" title="8.1 Introduccion a la logica" class="page">8.1 Introduccion a la logica</a></li>
+<li><a href="./8.2_Teoria_de_conjuntos.html" title="8.2 Teoria de conjuntos" class="page">8.2 Teoria de conjuntos</a></li>
+<li><b>8.3 Teoria de graficas</b></li>
+<li><a href="./8.4_Arboles.html" title="8.4 Arboles" class="page">8.4 Arboles</a></li>
 </ul>
 </li>
-<li><a href="../8._Matematicas_discretas.html" title="8. Matematicas discretas" class="page">8. Matematicas discretas</a></li>
 <li><a href="../16._Curso_de_Fundamentos_de_Gestión_de_Proyectos.html" title="16. Curso de Fundamentos de Gestión de Proyectos" class="page">16. Curso de Fundamentos de Gestión de Proyectos</a></li>
 </ul>
 </li>
@@ -159,85 +156,121 @@
 </ul>
  </div>
 		<div id="content">
-			<h1>1.4 Módulo de Teoría de Conjuntos <a name='Inteligencia Artificial:1. Curso de Pensamiento Lógico:1.4 Módulo de Teoría de Conjuntos'></a></h1>
+			<h1>8.3 Teoria de graficas <a name='Inteligencia Artificial:8. Matematicas discretas:8.3 Teoria de graficas'></a></h1>
 
 			<p>
-Comprender la teoría de conjuntos nos permite utilizar los conjuntos como herramienta para analizar, clasificar y ordenar los conocimientos adquiridos desarrollando la compleja red conceptual en que almacenamos nuestros aprendizajes.
+<b>Grafos: </b>Modelos matematicos que sirvan para representar las relaciones entre objetos de un conjunto. Es un conjunto de vertices, cosas o nodos conectados a traves de aristas.
 </p>
 
 <p>
-<b>Conceptos Básicos</b><br>
-<ol style='padding-left: 30pt' type="A" start="1">
-<li><b>Conjunto: </b>Es la agrupacion , clase, o colección de objetos o elementos que pertenecen y responden a la misma categoría. Existen cuatro formas de las cuales podemos definir los conjuntos:</li>
-</ol>
-<div style='padding-left: 60pt'>
-<b>- Extensión o enumeración: </b>Sus elementos son encerrados entre llaves y separados por comas. Cada conjunto describe un listado de todos sus elementos. Ademas sus elementos no se repiten.<br>
-A = {A, E, I, O, U}<br>
-B = {0, 2, 4, 6, 8, 10}<br>
-C = {P, L, A, T, Z, I}
+<b>REPRESENTACION G(V,E)</b><br>
+V: Vertices<br>
+E: Aristas
+</p>
+
+<p>
+<b>Tipos de grafos</b><br>
+<ul>
+<li><b>Simples:</b> lineas entre puntos, pero solo un camino de un punto a otro</li>
+<li><b>Multigrafo:</b> representa diferentes caminos para llegar al mismo punto</li>
+<li><b>Pseudografo:</b> perifericos o caminos que salen de un punto A y regresan al mismo punto A</li>
+<li><b>Grafo ponderado:</b> nodos unidos por lineas pero con unidades metricas que nos representan una unidad o recurso para optimizar las rutas</li>
+<li><b>Grafo dirigido:</b> caminos de una sola via de un punto a punto a otro, sin retorno.</li>
+<li><b>Multigrafo dirigido:</b> caminos de una sola ruta pero con varias rutas para llegar al mismo punto.</li>
+</ul>
+</p>
+
+<p>
+<b>Grado un vertice</b><br>
+<b>Aristas -&gt; </b>Caminos<br>
+<b>Vertices -&gt; </b>Nodos<br>
+El grado de un vertice(nodo) lo determinan el numero de aristas incidentes en un vertice V. Es decir el grado es igual al numero de vertices adyacentes.<br>
+<ul style='padding-left: 30pt'>
+<li>Existe una propiedad que establece: <b>La sumatoria de todos los grados de los vertices sera igual al doble de aristas del grafo.</b></li>
+</ul>
+</p>
+
+<p>
+<b>NOTA: </b><br>
+<ul>
+<li>Si la arista es un bucle en un vertice, contribuye con dos unidades al valor del grado. Esto porque cada conexion de la arista del bulce cuenta como su propio vertice de adyacencia, un vertice con un bucle se ve a si mismo como un nodo adyacente a ambos vertices finales de la arista.</li>
+<li>Los vertices de grado creo se les denomina <b>vertice aislado.</b></li>
+</ul>
+</p>
+
+<p>
+<b>Teorema</b><br>
+Un grafo conexo G, es <b>euleriano</b> (ciclo euleriano) si, y solo si, todos los <b>vertices son de grado par</b>.
+</p>
+
+<p>
+Un grafo conexo G contiene un <b>recorrido euleriano</b> si, y solo si , G tiene exactamente dos vertices de grado impar. Se inicia en uno de los vertices de grado impar y se finaliza el recorrido en el otro.
+</p>
+
+<p>
+<div style='padding-left: 30pt'>
+<b>Ciclo de euler:</b> Es un camino que pasa por cada arista una y solo una vez. Es un camino cerrado que recorre cada arista exactamente una vez. Inicia y finaliza en el mismo vertice.
 </div>
 </p>
 
 <p>
-<div style='padding-left: 60pt'>
-<b>- Comprension: </b>Sus elementos se determinan a través de una condicion que se estaclece entre llaves.<br>
-A = {x/x es una vocal}<br>
-B = {x/x es un número par menor que 11}<br>
-C = {x/x es una letra de la palabra Platzi}
+<div style='padding-left: 30pt'>
+<b>Camino de Euler: </b>Es un camino que pasa por cada arista una sola vez pero puede pasar por un mismo vertice varias veces.
 </div>
 </p>
 
 <p>
-<div style='padding-left: 60pt'>
-<b>- Diagramas de Venn: </b>Regiones cerradas que nos permiten visualizar las relaciones entre los conjuntos.
+<div style='padding-left: 30pt'>
+<b>Camino hamiltoniano: </b>Es un camino de un grafo, una sucesion de aristas adyacentes, que visita todos los vertices del grafo una sola vez.
 </div>
 </p>
 
 <p>
-<div style='padding-left: 60pt'>
-<b>- Descripcion verbal: </b>Se trata de un enunciado que describe una caracteristica comun a todos los ellementos del conjunto.
-</div>
+<ul>
+<li><b>Caminos: </b>Es una sucesion de vertices y conexiones donde no se puede repetir ningun vertice ni conexion.</li>
+<li><b>Cadena: </b>Es una sucecion de vertices y conexiones entre si, con las cuales se puede recorrer el grafo. </li>
+<li><b>Ciclos: </b>Es un camino donde lo unico que se repite es el vertice final.</li>
+<li><b>Cadena cerrada: </b>Se inicia y finaliza en el mismo vertice pero se puede repertir los vertices en el recorrido.</li>
+<li><b>Conexo:</b> Es donde se tienen todos los vertices conectados entre si.</li>
+<li><b>No conexo: </b>Cuando no podemos conectarnos con todos los grafos.</li>
+</ul>
 </p>
 
 <p>
-<ol style='padding-left: 30pt' type="A" start="2">
-<li><b>Elemento: </b>Es cada uno de los objetos por los cuales esta conformado un conjunto.  x​ε​A (El elemento x pertenece al conjunto A).</li>
-<li><b>Subconjunto: </b>En general si A y B son dos conjuntos cualesquiera, decimos que B es un subconjunto de A si todo elemento B lo es de A tambien.  B ​⊆​ ​A</li>
-</ol>
+<b>CONDICIONES PARA SABER SI HAY CAMINO HAMILTONIANO</b><br>
+<ul>
+<li>Grado(u) + Grado(v) &gt;= n-1, donde n es el numero de vertices y u y v son vertices.</li>
+<li>La condicion anteorior no es necesaria ni suficiente para determinar si hay un camino hamiltoniano.</li>
+<li>Cuando uno de los vertices de un grafo es de grado 1 no puede existir <b>CICLO HAMILTONIANO. </b>Si hay camino hamiltoniano pero no hay ciclo <b>NO ES UN GRAFO HAMILTONIANO.</b></li>
+</ul>
+</p>
+
+<h4>Matriz de adyacencia</h4>
+
+<p>
+Es otra manera de representar los grafos. Es muy util cuando el grafo se ha convertido muy complejo. Se ubican todos los vertices como titulos de columnas y filas. Se analiza nodo por nodo y se ubica uno en los vertices adyacentes al vertice en analisis.
+</p>
+
+<h4>Matriz de incidencia</h4>
+
+<p>
+Es una matriz binaria es decir solo puede tener 1 y 0. Las columnas son aristas y las filas son los vertices.
 </p>
 
 <p>
-<b>Tipos de Conjuntos</b><br>
-<ol style='padding-left: 30pt' type="A" start="1">
-<li><b>Conjunto Universo  (U, ​Ω):</b>  ​Se denomina así al conjunto formado por todos los elementos del tema de referencia.</li>
-<li><b>Conjunto Vacio ( { }, ​Ø​):</b>  ​​Se denomina así al conjunto que no tiene ningún elemento. A pesar de no tener elementos se le considera como conjunto.</li>
-<li><b>Conjunto Unitario:</b> Es el conjunto que tiene un solo elemento.</li>
-<li><b>Conjunto Disjuntos:</b> Se llaman conjuntos disjuntos aquellos que no tienen ningún elemento que pertenezca a ambos al mismo tiempo.</li>
-<li><b>Conjuntos iguales:</b> Los conjuntos son iguales, si tienen los mismos elementos. En teoría de conjuntos se acostumbra no repetir a los elementos por ejemplo: El conjunto { b, b, b, d, d } simplemente será { b, d }.</li>
-<li><b>Conjunto Infinito:</b> Es aquel conjunto cuya cantidad de elemento no se puede contar; es decir, es aquel conjunto en que sus elementos no se pueden nombrar o enumerar.</li>
-</ol>
-<b>Operacion con Conjuntos.</b><br>
-<ol style='padding-left: 30pt' type="A" start="1">
-<li><b>Union:</b> La ​unión​ de dos conjuntos ​A​ y ​B​ es el conjunto ​A​ ​∪​ ​B​ que contiene cada elemento que está por lo menos en uno de ellos.</li>
-<li><b>Inteseccion:</b> La ​intersección​ de dos conjuntos ​A​ y ​B​ es el conjunto ​A​ ∩ ​B​ que contiene todos los elementos comunes de ​A​ y ​B. ​</li>
-<li><b>Diferencia:</b> La ​diferencia​ entre dos conjuntos A y ​B​ es el conjunto ​A​ \ ​B​ que contiene todos los elementos de ​A​ que no pertenecen a ​B. ​</li>
-<li><b>Complemento:</b> El complemento de un conjunto A es el conjunto A<sup>C</sup> que contiene todos los elementos (respecto de algún conjunto referencial) que no pertenecen a A.</li>
-</ol>
+<b>NOTA: </b><br>
+<ul>
+<li>Grafo dirigido = matriz asimétrica</li>
+<li>Grafo no dirigido = matriz simétrica (La primer fila y conlumna tienen los mismo elementos en el mismo orden)</li>
+</ul>
 </p>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-
 
 
 			<br>
 			<span class="backlinks">
 				<hr class='footnotes'>
 				<b>Backlinks:</b>
-				<a href='../1._Curso_de_Pensamiento_Lógico.html'>Inteligencia Artificial:1. Curso de Pensamiento Lógico</a>
+				<a href='../8._Matematicas_discretas.html'>Inteligencia Artificial:8. Matematicas discretas</a>
 				<br /><br />
 			</span>
 
