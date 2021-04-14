@@ -143,6 +143,7 @@
 <ul>
 <li><a href="./Modulo_1.html" title="Modulo 1" class="page">Modulo 1</a></li>
 <li><b>Modulo 2</b></li>
+<li><a href="./Modulo_3.html" title="Modulo 3" class="page">Modulo 3</a></li>
 </ul></li>
 </ul>
  </div>
@@ -202,6 +203,8 @@ Tanto la barra diagonal inversa como la n forman un símbolo especial denominado
 </div>
 </p>
 
+<br>
+
 <h4>Funcion print() - La manera posicional de pasar argumentos</h4>
 
 <p>
@@ -209,12 +212,161 @@ La forma en que pasamos los argumentos a la función print() es la más común e
 Ej: <b>print("Mi nombre es", "Python.")</b>
 </p>
 
+<h4>Funcion print() - Arguementos palabras clave</h4>
+
+<p>
+El mecanismo se llama <b>argumentos de palabras clave</b>. El nombre se deriva del hecho de que el significado de estos argumentos no se toma de su ubicación (posición) sino de la palabra especial (palabra clave) utilizada para identificarlos.<br>
+<ul>
+<li>Cualquier argumento de palabra clave debe ponerse <b>después</b> del <b>último</b> <b>argumento</b> <b>posicional</b> (esto es muy importante).</li>
+<li>Argumento <b>end </b>elimina el salto de linea que se genera cuando se usan dos prints.</li>
+<li>Argumento <b>sep </b>separa los argumentos de print con el caracter especificado en el argumento.</li>
+</ul>
+</p>
+
+<h4>Literales - los datos en si mismos</h4>
+
+<p>
+Son notaciones para representar valores fijos en el código. Python tiene varios tipos de literales.
+</p>
+
+<p>
+<b>LITERALES NUMERICOS</b><br>
+<ul>
+<li>Si un numero entero esta precedido por un código 0O o 0o (cero-o), el numero será tratado como un valor octal.</li>
+<li>La segunda convención nos permite utilizar números en hexadecimal. Dichos números deben ser precedidos por el prefijo 0x o 0X (cero-x).</li>
+</ul>
+</p>
+
+<p>
+<ul>
+<li>Python distingue entre numero flotantes y numeros enteros. 4 es un número entero, mientras que 4.0 es un número punto-flotante. El punto decimal es lo que determina si es flotante.</li>
+<li>Por otro lado, no solo el punto hace que un número sea flotante. Se puede utilizar la letra e.</li>
+<li>La letra E (también se puede utilizar la letra minúscula e - proviene de la palabra exponente) la cual significa por diez a la n potencia. Ejemplo: <b>3E8 -&gt; 3 * 10^8</b></li>
+</ul>
+<div style='padding-left: 30pt'>
+<b>Nota:</b>
+</div>
+<ul style='padding-left: 30pt'>
+<li>El exponente (el valor después de la E) debe ser un valor entero.</li>
+<li>La base (el valor antes de la E) puede o no ser un valor entero.</li>
+</ul>
+<ul>
+<li>Python siempre elige la <b>presentación más corta del número</b>, y esto se debe de tomar en consideración al crear literales.</li>
+</ul>
+</p>
+
+<p>
+<b>LITERALES CADENA</b><br>
+<ul>
+<li>Si se delimita una cadena con una comilla, se debe cerrar con una comilla.</li>
+<li>Si se inicia una cadena con un apóstrofe, se debe terminar con un apóstrofe.</li>
+</ul>
+</p>
+
+<p>
+<b>LITERALES BOOLEANOS</b><br>
+<ul>
+<li>True o False</li>
+</ul>
+</p>
+
+<p>
+<ul>
+<li>Existe un literal especial más utilizado en Python: el literal None. Este literal es llamado un objeto de NonType (ningún tipo), y puede ser utilizado para representar la ausencia de un valor</li>
+</ul>
+</p>
+
+<h4>Operadores Basicos</h4>
+
+<p>
+Cuando los datos y operadores se unen, forman juntos expresiones. La expresión más sencilla es el literal.
+</p>
+
+<h4>Exponenciacion</h4>
+
+<p>
+<ul>
+<li>Un signo de ****<b> (doble asterisco) es un operador de </b>exponenciación** (potencia). El argumento a la izquierda es la base, el de la derecha, el exponente.
+<ul>
+<li>Cuando ambos ** argumentos son enteros, el resultado es entero también.</li>
+<li>Cuando al menos un ** argumento es flotante, el resultado también es flotante.</li>
+</ul></li>
+</ul>
+</p>
+
+<h4>Multiplicacion y Division</h4>
+
+<p>
+<ul>
+<li>En la multiplicacion:
+<ul>
+<li>Cuando ambos argumentos son enteros, el resultado es entero también.</li>
+<li>Cuando al menos un argumento es flotante, el resultado también es flotante.</li>
+</ul></li>
+</ul>
+</p>
+
+<p>
+<ul>
+<li>En la division:
+<ul>
+<li>El resultado producido por el operador de división siempre es flotante.</li>
+</ul></li>
+</ul>
+</p>
+
+<h4>Division Entera</h4>
+
+<p>
+Un símbolo de // (doble diagonal) es un operador de división entera. Difiere del operador estándar / en dos detalles:
+</p>
+
+<p>
+<ul>
+<li>El resultado carece de la parte fraccionaria, está ausente (para los enteros), o siempre es igual a cero (para los flotantes); esto significa que los resultados siempre son redondeados.</li>
+<li>Se ajusta a la regla entero vs flotante (Igual que la multplicacion y potenciacion)</li>
+</ul>
+</p>
+
+<p>
+<ul>
+<li>El resultado de la división entera siempre se redondea al valor entero inferior mas cercano del resultado de la división no redondeada.</li>
+<li>Esto es muy importante: <b>el redondeo siempre va hacia abajo.</b></li>
+<li>En caso de valores negativos se realiza siempre hacia el valor inferior. Ej. <b>-6 // 4 =&gt; -2</b></li>
+</ul>
+</p>
+
+<h4>Enlace</h4>
+
+<p>
+El <b>enlace</b> de un operador determina el orden en que se computan las operaciones de los operadores con la misma prioridad, los cuales se encuentran dentro de una misma expresión.
+</p>
+
+<p>
+<ul>
+<li>Todos los operadores tienen enlazado hacia la izquierda a excepcion de la <b>exponenciacion</b> que utiliza <b>enlazado hacia la derecha.</b></li>
+</ul>
+</p>
+
+<h4>Lista de prioridades</h4>
+
+<p>
+Nota: se han enumerado los operadores en orden de la mas alta (1) a la mas baja (4) prioridad.<br>
+<img src="../images/operadores_m2.png">
+</p>
+
+<h4>Variables</h4>
+
 <br>
 
 
 
 			<br>
 			<span class="backlinks">
+				<hr class='footnotes'>
+				<b>Backlinks:</b>
+				<a href='../Python_Essentials.html'>Python Essentials</a>
+				<br /><br />
 			</span>
 
 			

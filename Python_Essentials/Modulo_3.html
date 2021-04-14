@@ -1,0 +1,497 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Modulo 3</title>
+	<meta name="generator" content="Zim 0.68">
+	<meta name="viewport" content="width=device-width">
+	<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300&subset=latin,greek,latin-ext' rel='stylesheet' type='text/css'> -->
+	<![if !IE]>
+	<!-- comment out for IE since it spams the user with warnings -->
+	<script type='text/javascript' src='http://code.jquery.com/jquery-1.7.1.js'></script>
+	<script type='text/javascript'>
+		$(window).load(function(){$("#navigation").height( $("#content").height()+65 );});
+	</script>
+	<![endif]>
+	<style>
+		body, html {
+			height:100%;
+			font-family:'Open Sans', sans-serif;
+			line-height:1.5em;
+			font-weight:300;
+			background-color:#FAFAFA;
+			text-rendering:geometricPrecision;
+			margin:0;
+			padding:0;
+		}
+		.wrapper {
+			height:100%;
+			position:relative;
+		}
+		#navigation {
+			background-color:#F3F3F3;
+			display:inline-block;
+			border-right:1px solid #EAEAEA;
+			padding-right:65px;
+			padding-top:65px;
+			padding-left:25px;
+			position:relative;
+			float:left;
+			min-height:100%;
+		}
+		#content {
+			float:left;
+			display:inline-block;
+			position:absolute;
+			max-width:960px;
+			padding:65px;
+		}
+		#navigation ul {
+			margin-top:0;
+			margin-bottom:0;
+			padding-left:40px;
+		}
+		#navigation li {
+			list-style-type:none;
+		}
+		#navigation a {
+			text-decoration:none;
+			color:gray;
+		}
+		#navigation strong {
+			color:#4E9A06;
+			font-weight:400;
+		}
+		#navigation a:hover {
+			text-decoration:underline;
+		}
+		#content h1:nth-child(1) {
+			margin-top:0;
+		}
+		h1,h2,h3,h4,h5,h6 {
+			color:#4E9A06;
+			font-weight:300;
+			margin-bottom: 0;
+		}
+		p {
+			margin-top: 0;
+		}
+		#content a {
+			color:#CE5C00;
+		}
+		#content a {
+			text-decoration: none;
+		}
+		#content a:hover {
+			text-decoration: underline;
+		}
+		#content a:active {
+			text-decoration: underline;
+		}
+		#content strike {
+			color: grey;
+		}
+		#content u {
+			text-decoration: none;
+			background-color: yellow;
+		}
+		#content tt {
+			color: #2e3436;
+		}
+		#content pre {
+			color: #2e3436;
+			margin-left: 20px;
+		}
+		.backlinks {
+			color:gray;
+		}
+		hr.footnotes {
+			width: 20%;
+			margin-left: 0;
+		}
+		@media print{
+			#navigation{
+				background-color:#FFF;
+			}
+		}
+
+		span.zim-tag {
+			color: #ce5c00;
+		}
+		div.zim-object {
+			border-style:solid;
+			border-width:1px;
+		}
+
+		.checked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8sMEGsKGkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAEBUlEQVRIx62V22tdRRTGf7Nn73P2ybntnNOe3NqkPTGgLTVUUZF6QatSLOKTPgqCIqLgQ0H/A1sQQbBYCBb1QfAxiC8tSO1FqHkwJVKtjdTGNraUmObsc9nXmfGh7cGYpM1D5nHWzPetteZb3wg2eB2YqYm4zSadsMtoboiNBH/3TE0awx6j+MRoxoTg/IYRvP19TQrJS0bzhdHGSyKFkLTtjSKwMjyiEz43ynhtP6bdjBCWyFobAf7eT7VhNF/q1FRbjYjmUohlCVPwnB+6FUxMTJipqSmUUhhjEGKd3bMT4ks/Y6oLBK2Yth8hHYtCJXOix7Nf7xLMzc0xOzvLzp078TyPNE3viW3QJPXzhNWbxFFKHCmMhoLn/FHodd48vGfhapdAacXQlkFK5dL6wIUm6fuTZPuvqDQhaMUYYyiVyuQr6rXDexYuAdi3tSv1ZJNs/R/CaszzT+1na88uXFnCEnJVgivBNN8uTJKmHQI/ptOOcXNZzMz9mOqFs90OHpipWcYwlo5P4ebnuOkrvr5wgrH+h3im7y36MzuwRXYZeKha/OhP0EkadFoxQSdGSotedR/+XwMc2XvKdNUFOFqZx6LKZWIiwjgkikNmLp/hm8sH+K1zjFTHXfBYdTi+eJArzXM0GxFxoBDCopLvo/fqEwi1XPkWkGqjFo2TgB1jOYZUKZTS/D1/ncmLh7jon0IbRWoiTi59ymzzJEEQE3cStNZsGxqlfPE57MBbOR8fP3hDGalOO9fq2DlBvmZw8xa2IxACGn6TydlD/O6f5OzSV/zif0cYhLQaEXGkKBbz7Ov/AOlXV1cxgBJRI3fuSTrpTawt18kWIZN1CFuaONI0w0WOXfsI43YIggh/KUSlhqxrMz74AkOZcWBm9QkH+Gw8NDLuITi+m0yzhluSyJzBLcpblUhFxywSRAEtPwQjsKVN30CNh0uvYuOubSHLtN3J0TO1j0pmBNuFbFWRK0gyPRZpktL2I5JQkclKakNlnh54g6ocvevUr/Ai2a7wineEkcJupA3S1Wg0nVZM2E6wbEF5U5G9Q++wI7sfR7h3N8HVNstykBfzH+KJEZwiWD0aIwxCgJ0R1Mu7GXOeJSuK93bZtQIle4D9pUNU5DC5jEsu55AvZakM5NicGyEj8uuz8bUCQgj67QfY671P3vEoeC69gy695U1U7NG7XV0pUwBjDJa1/JJlWWxzHuflzQe5FJ/GsgUVuZ2t8lEkTvfc0aNHb72flBhjVicQQqCUuvM3/M+WDVguWBrMVdDXEGZlBVEUrVCU9d9s5+fnaTQa2PZyPxEIhJaI1EEoZwX4ncynp6fXrmB4eJjR0VFarRbNZnP9P9rt9gohqNVq1Ov1ZbF/AZGev3hLJ2/zAAAAAElFTkSuQmCC)}
+		.xchecked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8bDYnDxEwAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAEK0lEQVRIx9WVS2hTWRjHf/eR3CY1nbxMH2YiZRQS6qO13YlMVxY3SnVcuNIBFezGpSADLoQqLu1sHJCqdCFSXFpw4YOCSH3BtFqttTNamabX3DS5bfO6uffMoglja3RGcDMHzuac7/z/53++//cd+L8P6VuCPQYZ8ADNgBd4J31DcDcQs+GnHByRocEDv0kfBSjAOlYCs11Q+gpwDegS8LMJ+3QIK0ATzEhV8Odnz5bzw8P4dJ25aJQ/WlvJ1df/K7hSLtOcTNI+Pk69rpMTgqIQhCDvh1/VSpw79+gRrRMTmLZNezLJJsPg+a5dmOEwQlFqg1sWG16/Jv7sGWXDwBACFQjC9HcwIMONKkGp4PGAJGEDS0IQmZlhnWnye3c3eiyGo6qr3WHbrJ+dJf7gAXI6zSIr72T7/fgzmT4FHnTBsgrQBfYvTU0km5vxz86iADnAm0rRPTWFt7cXZccOJJcLAGHb2K9ekT93jmwmwwdAAFpjI6Ntbfxw5879ag7l6o1sr5eHHR3IsRgeQK/M4sQE+YEB7JcvEY6zAj45SWFgAPPxYwzHoQxIkQjTPT0kIxE+Noj8sexFn4/xnh58iQTeSpHkHAdrbIzi0BCOrmNPTpK/eJHM3bt8sCyKQCiR4NWePWSiUZw1+ZLXJm4pFKLhzBlCsRh2RUXacVgeGaF47RrL58+zcP8+RrmMkCQinZ1EL1zAjERqmkH+tLYl1G3bCJw4QUjT0IA0MJfLMX/5MqmHD0nZNiUgtGULG/r7ccXjINWuWbnmqsuFu7sb/4EDNLlcBIEioNs2KUAFGmMxmk6dQm1tRZI+3xBqEkiShBQOox05Ql1nJ26gvuIUAWiKQnj/ftStW5Fk+YuF+NldsbBA4cYN9KdPmaso8Fc62ZJtk7l1C2t0FGdxESHE1xE4hkHh6lX0oSHSpRIewC/LrPf7CSgKNpCamkI/fZr8pUuIZBIcpyaBunahPp1mub+fDyMjGKUSChCsq6Nh717q9u2jbnSU0uAgRrFIwTThyhUCqRS+hgZKLS1fJvDm87SNjZGcnsYUAjcQ8vsJ9/Xh7u1FDgRQN20iks3iDA+zZFmYhQLqzZtsj8WY3L0baY2Sf55ICCKpFHUzM2SEQAJCHg+hY8fQDh5EDgRWDoRC1J88SePRo2geD0XAcBy8b98Sv3ePYDZbbf2rFQjLIphMsmDbaEBQVQkePox26BCSz7e6i4bDrDt+nGYhmBscpFAskheC4Js3bPR4qHphFYEnlcI7P4/jdqNpGu8TCe4oCsXr1z//F2ga3+/cSfTJE0qmSVYIsKzaOZDcbjKyzFIiwfvt21kMBLA07YsetzWNd+3tLLW0sH5igvT8PH9Go/z44kX+E4LGjg7GDYOcy4XlOEgLC//5P/5LCFzxOPLmzWyIx+m6fduu7v0NVGqyTSycKksAAAAASUVORK5CYII=)}
+		.unchecked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8qAt8h3m8AAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAA60lEQVRIx+2VsQqDMBRF70sCLg5OLoKgjk7+lJ/hh+STXBwcnRz8ArMEkrxOFktbaC3tULzTg5e8k5vADXDq70VbobXmvu/hvQczg4heHrJfXxQFuq67blZbMc8zpmlCXddIkgTOuZcBUko45zCOI6y1Nz2xFSEEZFmGOI7fGg4A3nsQEZqmuXOu9jallACAtm3fvmutNaIoAjM/dkBECCF89KCbk4eAb+kEnIAT8EsAM0OIz3hSyrssUvss8t5fg+uIrLXPs0gIgWVZYIyBUurQyYdheO4gz3NUVQVjDNZ1PfSjpWmKsixvehfB9GBZ3NndrgAAAABJRU5ErkJggg==)}
+		.migrated-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB+AKHREFA8vJSnkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAC1klEQVRIx+2VT0hUURTGf/e958w4Tc3TYowMw1GyEgwr1MqsFmbZIrIWQZsWJUjbdoHQpl3Qps0swnCRECQFYkR/TC1iKkqmfzAKTo2Vf8hoRsfR995tkRMT87RRWkUHHhy495zvnvvu933wP/75EKkkEAjIYDCIaZpIKRFCZN0kfX9xcTGtra2/irVUEolECIfDlJeXo+s6hmFkDaCqKoZhEAqFSCaTv60pqcSyLAoLC/F4PEtqDmCaJkIIKisrMybX0sdUVRWA5ubmPzdNjjI1cpXkZC/O1fV03PXgdDqRUtpPIITAsqxsDz0Z/3CZQv8uqo4N4C8/Tp2/DdM0MiZQlvk41OTkI/LW1SGtCVb5drD3eCc71wcA+VcAHA5vDd8+3UGakxiJV7i9pdQevU5T1R35pJ3MV5QW1pf+0kWBheJ2SWua8EQXZXsu4fVVYEz1sEKvof5EuxjoPvzpcRvrdp9C2gGMx6cpOHBmbImMesds7BZubwMVDTfXDnQ3vQfK7AC8wLfExMX5whyQc3q2OEnjGm5vE76SQxsfBLr77a7CNf+n0r/l6sSMtsBSnurckiIILCobAtVZhpF4gZF4jubaymj4Ch/fd380LE7bAnjc0NPxk2yqpmEuwGxF0ag+0k5uTpzZeBeaazvj0We8fXojainsb2xh2BZgbe0gSIllzSIUh63wfQ6dZ/O2fbjcKlOj58jJ3cVENESw5yErc9nf2MLQ4jwQAkV1Lqiq37/cZ9WaahJjF9AcmxiPDhLs7ePe23oOnmUwg2hSShQle96tKDjA2HAniusgo9FxnvY9Jxw7RWzGYy92QghM00x5g53qp9sHmtB58/o2umOI2NwGolMnMYUHIb7aAyiKwsjICLqu2/qBEIKUUAohMaSHSLyBSMoPTINQ6CX5+fn2AEVFRZSUlBCPx4nFYhl3L4RESjF/GEgX3pSj+Xw+/H7/b3U/AEOZFnp7O5+5AAAAAElFTkSuQmCC)}
+		ul {list-style-image: none}
+		/* ul rule needed to reset style for sub-bullets */
+
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div id="navigation"> <ul>
+<li><a href="../Inteligencia_Artificial.html" title="Inteligencia Artificial" class="page">Inteligencia Artificial</a></li>
+<li><a href="../Python_Essentials.html" title="Python Essentials" class="page">Python Essentials</a>
+<ul>
+<li><a href="./Modulo_1.html" title="Modulo 1" class="page">Modulo 1</a></li>
+<li><a href="./Modulo_2.html" title="Modulo 2" class="page">Modulo 2</a></li>
+<li><b>Modulo 3</b></li>
+</ul></li>
+</ul>
+ </div>
+		<div id="content">
+			<h1>Modulo 3 <a name='Python Essentials:Modulo 3'></a></h1>
+
+			<h3>Condicionales</h3>
+
+<br>
+
+<h4>Declaracion ELIF</h4>
+
+<p>
+elif se usa para verificar más de una condición, y para detener cuando se encuentra la primera declaración verdadera.<br>
+La forma de ensamblar las siguientes declaraciones if-elif-else a veces se denomina <b>cascada</b>.
+</p>
+
+<p>
+Se debe prestar atención adicional a este caso:<br>
+<ul>
+<li>No debes usar else sin un if precedente.</li>
+<li>Else siempre es la última rama de la cascada , independientemente de si has usado elif o no.</li>
+<li>Else es una parte opcional de la cascada, y puede omitirse.</li>
+<li>Si hay una rama else en la cascada, solo se ejecuta una de todas las ramas.</li>
+<li>Si no hay una rama else, es posible que no se ejecute ninguna de las opciones disponibles.</li>
+</ul>
+</p>
+
+<br>
+
+<h3>Ciclos o bucles</h3>
+
+<br>
+
+<h4>While</h4>
+
+<p>
+En general, en Python, un ciclo se puede representar de la siguiente manera:
+</p>
+
+<p>
+<i>while expresión_condicional:</i><br>
+<i>    instrucción</i>
+</p>
+
+<p>
+Si observas algunas similitudes con la instrucción if, está bien. De hecho, la diferencia sintáctica es solo una: usa la palabra while en lugar de la palabra if. La diferencia semántica es más importante: cuando se cumple la condición, if realiza sus declaraciones sólo una vez; while repite la ejecución siempre que la condición se evalúe como True.<br>
+<b>Nota:</b> todas las reglas relacionadas con sangría también se aplican aquí.
+</p>
+
+<h4>For</h4>
+
+<p>
+Otro tipo de ciclo disponible en Python proviene de la observación de que a veces es más importante contar los "giros o vueltas" del ciclo que verificar las condiciones.<br>
+<ul>
+<li>La palabra reservada for abre el ciclo for; nota - No hay condición después de eso; no tienes que pensar en las condiciones, ya que se verifican internamente, sin ninguna intervención.</li>
+<li>Cualquier variable después de la palabra reservada for es la variable de control del ciclo; cuenta los giros del ciclo y lo hace automáticamente.</li>
+<li>La palabra reservada in introduce un elemento de sintaxis que describe el rango de valores posibles que se asignan a la variable de control.</li>
+<li>La función range() (esta es una función muy especial) es responsable de generar todos los valores deseados de la variable de control; en nuestro ejemplo, la función creará (incluso podemos decir que alimentará el ciclo con) valores subsiguientes del siguiente conjunto: 0, 1, 2 .. 97, 98, 99; nota: en este caso, la función range() comienza su trabajo desde 0 y lo finaliza un paso (un número entero) antes del valor de su argumento.</li>
+<li>Nota la palabra clave pass dentro del cuerpo del ciclo - no hace nada en absoluto; es una instrucción vacía : la colocamos aquí porque la sintaxis del ciclo for exige al menos una instrucción dentro del cuerpo (por cierto, if, elif, else y while expresan lo mismo).</li>
+</ul>
+</p>
+
+<h4>Declaraciones break y continue</h4>
+
+<p>
+Python proporciona dos instrucciones especiales para la implementación de estas dos tareas. Digamos por razones de precisión que su existencia en el lenguaje no es necesaria: un programador experimentado puede codificar cualquier algoritmo sin estas instrucciones. Tales adiciones, que no mejoran el poder expresivo del lenguaje, sino que solo simplifican el trabajo del desarrollador, a veces se denominan dulces sintácticos o azúcar sintáctica.
+</p>
+
+<p>
+Estas dos instrucciones son:<br>
+<ul>
+<li><b>Break:</b> Sale del ciclo inmediatamente, e incondicionalmente termina la operación del ciclo; el programa comienza a ejecutar la instrucción más cercana después del cuerpo del ciclo.</li>
+<li><b>Continue:</b> Se comporta como si el programa hubiera llegado repentinamente al final del cuerpo; el siguiente turno se inicia y la expresión de condición se prueba de inmediato.</li>
+</ul>
+</p>
+
+<p>
+Los ciclos FOR y WHILE también pueden tener la rama <b>else</b>, como los if.<br>
+<ul>
+<li>La rama else del ciclo siempre se ejecuta una vez, independientemente de si el ciclo ha entrado o no en su cuerpo .</li>
+</ul>
+Ejemplo:<br>
+<i>i = 5</i><br>
+<i>while i &lt; 5:</i><br>
+<i>    print(i)</i><br>
+<i>    i += 1</i><br>
+<i>else:</i><br>
+<i>    print("else:", i)</i>
+</p>
+
+<h3>Logica de computadora</h3>
+
+<br>
+
+<h4>and</h4>
+
+<p>
+Un operador de conjunción lógica en Python es la palabra y. Es un operador binario con una prioridad inferior a la expresada por los operadores de comparación.<br>
+El resultado proporcionado por el operador and se puede determinar sobre la base de la tabla de verdad.
+</p>
+
+<h4>or</h4>
+
+<p>
+Un operador de disyunción es la palabra or. Es un operador binario con una prioridad más baja que and (al igual que + en comparación con *).
+</p>
+
+<h4>not</h4>
+
+<p>
+Además, hay otro operador que se puede aplicar para condiciones de construcción. Es un operador unario que realiza una negación lógica. Su funcionamiento es simple: convierte la verdad en falso y lo falso en verdad. Este operador se escribe como la palabra not, y su prioridad es muy alta: igual que el unario + y -.
+</p>
+
+<h3>Expresiones logicas</h3>
+
+<p>
+Puedes estar familiarizado con las leyes de De Morgan. Dicen que:<br>
+<ul>
+<li>La negación de una conjunción es la separación de las negaciones.</li>
+<li>La negación de una disyunción es la conjunción de las negaciones.</li>
+</ul>
+</p>
+
+<p>
+Escribamos lo mismo usando Python:<br>
+not (p and q) == (not p) or (not q) <br>
+not (p or q) == (not p) and (not q)
+</p>
+
+<h3>Operadores bitwise</h3>
+
+<p>
+Hay cuatro operadores que le permiten manipular <b>bits de datos individuales</b>. Se denominan <b>operadores bitwise</b>.<br>
+Cubren todas las operaciones que mencionamos anteriormente en el contexto lógico, y un operador adicional. Este es el operador xor (como en o exclusivo ), y se denota como ^ (signo de intercalación).
+</p>
+
+<p>
+Aquí están todos ellos:<br>
+<ul>
+<li>&amp;  (ampersand) - conjunción a nivel de bits.</li>
+<li>|  (barra vertical) - disyunción a nivel de bits.</li>
+<li>~  (tilde) - negación a nivel de bits.</li>
+<li>^  (signo de intercalación) - exclusivo a nivel de bits o (xor).</li>
+</ul>
+</p>
+
+<p>
+La diferencia en el funcionamiento de los operadores lógicos y de bits es importante: los operadores lógicos no penetran en el nivel de bits de su argumento. Solo les interesa el valor entero final.
+</p>
+
+<p>
+Los operadores bitwise son más estrictos: tratan con cada bit por separado. Si asumimos que la variable entera ocupa 64 bits (lo que es común en los sistemas informáticos modernos), puede imaginar la operación a nivel de bits como una evaluación de 64 veces del operador lógico para cada par de bits de los argumentos. Su analogía es obviamente imperfecta, ya que en el mundo real todas estas 64 operaciones se realizan al mismo tiempo (simultáneamente).
+</p>
+
+<h3>Listas</h3>
+
+<p>
+La lista es un tipo de dato en Python que se utiliza para almacenar múltiples objetos. Es una colección ordenada y mutable de elementos separados por comas entre corchetes. Es una colección de elementos, pero cada elemento es un escalar.
+</p>
+
+<p>
+El valor dentro de los corchetes que selecciona un elemento de la lista se llama un <b>índice</b>, mientras que la operación de seleccionar un elemento de la lista se conoce como <b>indexación</b>.
+</p>
+
+<p>
+<b>Nota</b>: todos los índices utilizados hasta ahora son literales. Sus valores se fijan en el tiempo de ejecución, pero cualquier expresión también puede ser un índice. Esto abre muchas posibilidades.
+</p>
+
+<h4>La función len()</h4>
+
+<p>
+La longitud de una lista puede variar durante la ejecución. Se pueden agregar nuevos elementos a la lista, mientras que otros pueden eliminarse de ella. Esto significa que la lista es una entidad muy dinámica.
+</p>
+
+<p>
+Si deseas verificar la longitud actual de la lista, puedes usar una función llamada len() (su nombre proviene de length - longitud).
+</p>
+
+<p>
+La función toma el nombre de la lista como un argumento y devuelve el número de elementos almacenados actualmente dentro de la lista (en otras palabras, la longitud de la lista).
+</p>
+
+<h4>Eliminando elementos de una lista</h4>
+
+<p>
+Cualquier elemento de la lista puede ser eliminado en cualquier momento, esto se hace con una instrucción llamada del (eliminar). Nota: es una instrucción, no una función.<br>
+<b>del numeros[1]</b>
+</p>
+
+<h4>Funciones vs. metodos.</h4>
+
+<p>
+Un método es un tipo específico de función: se comporta como una función y se parece a una función, pero difiere en la forma en que actúa y en su estilo de invocación.
+</p>
+
+<p>
+Una función no pertenece a ningún dato: obtiene datos, puede crear nuevos datos y (generalmente) produce un resultado.
+</p>
+
+<p>
+Un método hace todas estas cosas, pero también puede cambiar el estado de una entidad seleccionada.
+</p>
+
+<p>
+Un método es propiedad de los datos para los que trabaja, mientras que una función es propiedad de todo el código.
+</p>
+
+<p>
+Esto también significa que invocar un método requiere alguna especificación de los datos a partir de los cuales se invoca el método.
+</p>
+
+<p>
+Puede parecer desconcertante aquí, pero lo trataremos en profundidad cuando profundicemos en la programación orientada a objetos.
+</p>
+
+<p>
+En general, una invocación de función típica puede tener este aspecto:
+</p>
+
+<p>
+<i>resultado =  funcion(argumento)</i>
+</p>
+
+<p>
+La función toma un argumento, hace algo y devuelve un resultado.
+</p>
+
+<p>
+Una invocación de un método típico usualmente se ve así:
+</p>
+
+<p>
+<i>resultado =  data.method(arg)</i>  
+</p>
+
+<p>
+Nota: el nombre del método está precedido por el nombre de los datos que posee el método. A continuación, se agrega un punto, seguido del nombre del método y un par de paréntesis que encierran los argumentos.
+</p>
+
+<p>
+El método se comportará como una función, pero puede hacer algo más: puede cambiar el estado interno de los datos a partir de los cuales se ha invocado.
+</p>
+
+<h4>Agregar elementos a una lista: append() e insert()</h4>
+
+<p>
+Un nuevo elemento puede ser añadido al final de la lista existente: <b>lista.append(valor)</b>
+</p>
+
+<p>
+Dicha operación se realiza mediante un método llamado append(). Toma el valor de su argumento y lo coloca al final de la lista que posee el método.
+</p>
+
+<p>
+La longitud de la lista aumenta en uno.
+</p>
+
+<p>
+El método insert() es un poco más inteligente: puede agregar un nuevo elemento en cualquier lugar de la lista, no solo al final.
+</p>
+
+<p>
+<b>lista.insert(ubicación,valor)</b>  
+</p>
+
+<p>
+Toma dos argumentos:<br>
+<ul>
+<li>El primero muestra la ubicación requerida del elemento a insertar. Nota: todos los elementos existentes que ocupan ubicaciones a la derecha del nuevo elemento (incluido el que está en la posición indicada) se desplazan a la derecha, para hacer espacio para el nuevo elemento.</li>
+<li>El segundo es el elemento a insertar.</li>
+</ul>
+Observa el código en el editor. Ve como usamos los métodos append() e insert(). Presta atención a lo que sucede después de usar insert(): el primer elemento anterior ahora es el segundo, el segundo el tercero, y así sucesivamente.
+</p>
+
+<p>
+<b>Forma para revertir valor de variables en python</b><br>
+Python ofrece una forma más conveniente de hacer el intercambio, echa un vistazo:
+</p>
+
+<p>
+variable1 = 1<br>
+variable2 = 2
+</p>
+
+<p>
+variable1, variable2 = variable2, variable1 
+</p>
+
+<h3>Ordenamiento burbuja</h3>
+
+<p>
+La esencia de este algoritmo es simple: comparamos los elementos adyacentes y, al intercambiar algunos de ellos, logramos nuestro objetivo.
+</p>
+
+<h3>Rodajas</h3>
+
+<p>
+Las listas (y muchas otras entidades complejas de Python) se almacenan de diferentes maneras que las variables ordinarias (escalares).
+</p>
+
+<p>
+Se podría decir que:<br>
+<ul>
+<li>El nombre de una variable ordinaria es el nombre de su contenido.</li>
+<li>El nombre de una lista es el nombre de una ubicación de memoria donde se almacena la lista.</li>
+</ul>
+Lee estas dos líneas una vez más, la diferencia es esencial para comprender de que vamos a hablar a continuación.
+</p>
+
+<p>
+La asignación: lista2 = lista1copia el nombre de la matriz, no su contenido. En efecto, los dos nombres (lista1 y lista2) identifican la misma ubicación en la memoria de la computadora. Modificar uno de ellos afecta al otro, y viceversa.
+</p>
+
+<p>
+Una <b>rodaja</b> es un elemento de la sintaxis de Python que permite hacer una copia nueva de una lista, o partes de una lista. Una de las formas más generales de la rodaja es la siguiente: <b>miLista[inicio:fin]. </b>Una rodaja de este tipo crea una nueva lista (de destino), tomando elementos de la lista de origen: los elementos de los índices desde el principio hasta el
+</p>
+
+<p>
+<b>Nota</b>: no hasta el fin, sino hasta fin-1. Un elemento con un índice igual a fin es el primer elemento el cual no participa en la segmentación.
+</p>
+
+<p>
+<b>INDICES NEGATIVOS EN RODAJAS</b><br>
+<b>miLista[inicio:fin]</b>
+</p>
+
+<p>
+Para repetir:<br>
+<ul>
+<li>inicio es el índice del primer elemento incluido en la rodaja.</li>
+<li>fin es el índice del primer elemento no incluido en la rodaja.</li>
+</ul>
+</p>
+
+
+
+			<br>
+			<span class="backlinks">
+				<hr class='footnotes'>
+				<b>Backlinks:</b>
+				<a href='../Python_Essentials.html'>Python Essentials</a>
+				<br /><br />
+			</span>
+
+			
+		</div>
+	</div>
+</body>
+</html>
+
